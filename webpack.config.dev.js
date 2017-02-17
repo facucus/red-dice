@@ -13,7 +13,7 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
@@ -22,7 +22,7 @@ export default {
       {
         test: /\.js$/,
         include: path.join(__dirname, 'client'),
-        loader: ['babel']
+        loader: ['babel-loader']
       }
     ]
   },
