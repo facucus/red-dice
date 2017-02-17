@@ -6,7 +6,6 @@ import SignupForm from './SignupForm';
 class SignupPage extends Component {
   render () {
     const { userSignupRequest } = this.props;
-
     return (
       <div className="row">
         <div className="col-md-4 col-md-offset-4">
@@ -21,4 +20,4 @@ SignupPage.propTypes = {
   userSignupRequest: PropTypes.func.isRequired,
 }
 
-export default connect(null, { userSignupRequest })(SignupPage);
+export default connect((state) => {return {}}, { userSignupRequest })(SignupPage);
